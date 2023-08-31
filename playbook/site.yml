@@ -1,0 +1,13 @@
+---
+- name: Install and Configure Clickhouse, Vector, and LightHouse
+  hosts: 
+    - clickhouse
+    - vector
+    - lighthouse
+  roles:
+    - role: clickhouse-role
+      when: "'clickhouse' in group_names"
+    - role: vector-role
+      when: "'vector' in group_names"
+    - role: lighthouse-role
+      when: "'lighthouse' in group_names"
