@@ -54,12 +54,14 @@ Ansible Roles
 Vector
 
 Эта роль устанавливает и настраивает Vector на вашем сервере.
+
 Параметры
 
-    vector_version: Версия Vector, которую вы хотите установить. По умолчанию 0.32.0.
-    vector_rpm_url: URL для скачивания RPM пакета Vector. По умолчанию https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm.
-    vector_config_template: Путь к файлу шаблона конфигурации Vector. По умолчанию /root/08-ansible-02-playbook/playbook/templates/vector-config.j2.
-    vector_config_destination: Путь, куда должен быть скопирован файл конфигурации Vector. По умолчанию /etc/vector/vector.toml.
+1. vector_version: Версия Vector, которую вы хотите установить. По умолчанию 0.32.0.
+2. vector_rpm_url: URL для скачивания RPM пакета Vector. По умолчанию https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm.
+3. vector_config_template: Путь к файлу шаблона конфигурации Vector. По умолчанию /root/08-ansible-02-playbook/playbook/templates/vector-config.j2.
+4. vector_config_destination: Путь, куда должен быть скопирован файл конфигурации Vector. По умолчанию /etc/vector/vector.toml.
+
 
 Пример использования
 
@@ -93,9 +95,11 @@ LightHouse
 Использование
 
     Установите требуемые роли, используя ansible-galaxy:
+
 ```
 ansible-galaxy install -r requirements.yml
 ```
+
     Создайте файл инвентаря с вашими хостами. Например:
 
 ```
@@ -107,7 +111,6 @@ lighthouse_host ansible_ssh_host=your_lighthouse_host_ip
 ```
 
 Создайте playbook, который использует роли. Например:
-
 
 ```
 ---
