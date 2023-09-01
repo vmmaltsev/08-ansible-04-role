@@ -139,8 +139,18 @@ ansible-playbook -i your_inventory_file your_playbook.yml
 
 Выложите все roles в репозитории. Проставьте теги, используя семантическую нумерацию. Добавьте roles в requirements.yml в playbook.
 
+https://github.com/vmmaltsev/vector-role/releases/tag/v1.0.0
+
+https://github.com/vmmaltsev/lighthouse-role/releases/tag/v1.0.0
+
+![alt text](https://github.com/vmmaltsev/screenshot/blob/main/Screenshot_30.png)
+
 Переработайте playbook на использование roles. Не забудьте про зависимости LightHouse и возможности совмещения roles с tasks.
 
+![alt text](https://github.com/vmmaltsev/screenshot/blob/main/Screenshot_31.png)
+
 Выложите playbook в репозиторий.
+
+https://github.com/vmmaltsev/08-ansible-04-role/blob/main/playbook/site.yml
 
 В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
